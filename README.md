@@ -43,14 +43,14 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/50abaa2e-13aa-471c-9cfc-e36f78e4834d)
 
 
-Steps : 
+### Steps : 
 #### 1. Create a Linked Server To Azure Blob Storage 
 #### 2. Connect to Source Data Set
 #### 3. Create a Linked Server To Azure Data Lake storage (GEN2)
 #### 4. Slink Data set
 #### 5. Create a Pipeline
 #### 6. Execute Copy Activity when the file becomes available
-#### 7. ScheduleTrigger<br>
+#### 7. ScheduleTrigger <br>
 
  ### Pipeline Overview : 
 
@@ -58,8 +58,32 @@ Steps :
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/6c17c903-8d2f-406e-9b6c-bfac9300fba5)
 
  ### 2- ECDC Data 
-![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/d0acf9ab-a238-4eb2-90e2-b502f0e33e85)
+ the ECDC Data Content Four File of CSV 
 
-
-(Connect using HTTP connector) 
+#### 1. Case & Deaths Data.csv
+#### 2. Hospital Admission Data.csv
+#### 3. testing.csv
+#### 4. country_response.csv
  
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/628015ca-81ce-4495-8cdf-53e983c3625b)
+
+### Steps : 
+#### 1. Create a Linked Server using an HTTP connector
+#### 2. Connect to Source Data Set
+#### 3. Create a Linked Server To Azure Data Lake storage (GEN2)
+#### 4. Slink Data set
+#### 5. Create a Pipeline With Parameters & Variables 
+#### 6. used Lookup to get all Parameters from Json File then pass it to  ForEach ECDC DATA as shown Below 
+#### 7. ScheduleTrigger <br>
+
+### Json File : 
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/3334e5dd-b638-4f21-af29-7170f9f35eb0)
+
+
+ ### Pipeline Overview : 
+ ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/0823f057-9f65-4c61-aed0-581a679a9d79)
+
+
+ # Transformion  
+ #### Cases & Deaths Data using Data Flow 
+
