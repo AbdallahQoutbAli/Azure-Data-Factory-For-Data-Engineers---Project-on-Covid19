@@ -177,8 +177,10 @@ pyspark_notebooks/transform_population_data.py
  # Reporting via Power BI
 
  1- Create a Connection from Azure SQL Loading Data  <br>
- 2- Make 3 pages and analysis our Data  <br>
- 3- publish it to Power BI Server   <br>
+ 2- Make 3 pages and analysis The Date By Get Total confirmed Data cases and death Count  <br>
+ 3- Get The Trending Of Data based on Reporting Date <br>
+ 4- publish The Report to Power BI Server   <br>
+ 5- Publish to web <br>
   ### Sample :
  ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/e1dfa823-2abb-4742-aeb0-223cb6eebb68)
 
