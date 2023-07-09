@@ -192,8 +192,11 @@ pyspark_notebooks/transform_population_data.py
 <p> 
 Thanks <br>
 Abdallah  Ali <br>
+
 BI Developer  <br>
-Abdallah.Qoutb@gmail.com <br>
+
+Abdallah.Qoutb@gmail.com
+ 
 [Linkedin](https://www.linkedin.com/in/abdallah-qoutb/)
 </p>
 
