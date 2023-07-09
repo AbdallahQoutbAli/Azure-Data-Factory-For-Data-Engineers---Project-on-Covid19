@@ -21,7 +21,7 @@ Our main objective here is to create a data platform from which our data scienti
    -  The data bricks 
  
  - Data warehouse solution : 
-    -  we've used Azure's SQL database for our 
+    -  we've used Azure's SQL database
  
  - visualization : 
     - Power BI Desktop and Power BI service  
