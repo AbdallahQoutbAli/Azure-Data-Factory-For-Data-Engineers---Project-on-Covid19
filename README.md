@@ -160,4 +160,36 @@ pyspark_notebooks/transform_population_data.py
 
  ### End Data Transformation 
 
+
+ #  Copy Data to Azure SQL
+
+ 1- Copy Cases and Deaths  <br> 
+ 2- Copy_hospital_admissions_daily  <br>
+ 3- Copy testing_data   <br>
+
+ Sample :  
+ ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/94083675-d0ec-44f4-8e13-b6ea596cd06d)
+
+ ### End Copy Data to Azure SQL
+
+ # Reporting via Power BI
+
+ 1- Create a Connection from Azure SQL Loading Data  <br>
+ 2- Make 3 pages and analysis our Data  <br>
+ 3- publish it to Power BI Server   <br>
+ Sample :
+ ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/e1dfa823-2abb-4742-aeb0-223cb6eebb68)
+
+Dashboard Link : 
+https://app.powerbi.com/view?r=eyJrIjoiYjBhYWU0NTItMmVhOS00MGM5LTk1ZGEtMTQxZTdmZDUxMWUwIiwidCI6ImUwYjlhZTFlLWViMjYtNDZhOC1hZGYyLWQ3ZGJjZjIzNDBhOSJ9
+
+
+Thanks
+Abdallah  Ali
+BI Developer 
+Abdallah.Qoutb@gmail.com
+
+
+ 
+
  
