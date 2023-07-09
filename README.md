@@ -1,4 +1,5 @@
-![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/6c17c903-8d2f-406e-9b6c-bfac9300fba5)![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/1733005b-719d-4331-884a-67cf8708e3af)# Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19
+
+# Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19
 
 
 
@@ -48,7 +49,7 @@ Steps :
 5-Create Pipeline
 6-Execute Copy Activity when the file becomes available
 7-ScheduleTrigger
-
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/6c17c903-8d2f-406e-9b6c-bfac9300fba5)
 
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/d0acf9ab-a238-4eb2-90e2-b502f0e33e85)
 
