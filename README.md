@@ -13,23 +13,23 @@ Our main objective here is to create a data platform from which our data scienti
  
  ### Tools: <br> 
  - Data Integration/Ingestion : 
- used ADF Data Flows within the Data Factory  
+    - used ADF Data Flows within the Data Factory  
  
  - Transformation : 
- Data Flows within the Data Factory
- HDInsight
- The data bricks 
+   -  Data Flows within the Data Factory
+    - HDInsight
+   -  The data bricks 
  
  - Data warehouse solution : 
-  we've used Azure's SQL database for our 
+    -  we've used Azure's SQL database for our 
  
  - visualization : 
- Power BI Desktop and Power BI service  
+    - Power BI Desktop and Power BI service  
 
 
-<br> Note :
-Data Factory will be used as the orchestration For the HDInsight and the data bricks  <br>
-All of the transformed data will then be stored in our Azure Data Lake storage (GEN2)
+<br> Note : <br>
+- Data Factory will be used as the orchestration For the HDInsight and the data bricks  <br>
+- All of the transformed data will then be stored in our Azure Data Lake storage (GEN2)
 
 
 # Solution Architecture Overview : 
@@ -40,6 +40,7 @@ All of the transformed data will then be stored in our Azure Data Lake storage (
  
 Ingest "population by age" for all EU Countries into the Data Lake to support the machine learning models to predict an increase in Covid-19 mortality rates
 
+###  Overview
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/50abaa2e-13aa-471c-9cfc-e36f78e4834d)
 
 
@@ -48,23 +49,28 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
 #### 2. Connect to Source Data Set
 #### 3. Create a Linked Server To Azure Data Lake storage (GEN2)
 #### 4. Slink Data set
-#### 5. Create a Pipeline
-#### 6. Execute Copy Activity when the file becomes available
-#### 7. ScheduleTrigger <br>
-
+#### 5. Create a Pipeline :
+  <ol>
+   <li> Execute Copy Activity when the file becomes available </li>
+   <li> Check metadata counts before loading the Data using the IF Condition  </li>
+   <li> Finally Load Data Into Our Destination </li>
+  </ol>
+  
+#### 6. ScheduleTrigger <br>
  ### Pipeline Overview : 
 
 
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/6c17c903-8d2f-406e-9b6c-bfac9300fba5)
 
  ### 2- ECDC Data 
- the ECDC Data Content Four File of CSV 
+ #### the ECDC Data Content Four File of CSV : 
 
-#### 1. Case & Deaths Data.csv
-#### 2. Hospital Admission Data.csv
-#### 3. testing.csv
-#### 4. country_response.csv
+##### 1. Case & Deaths Data.csv
+##### 2. Hospital Admission Data.csv
+##### 3. testing.csv
+##### 4. country_response.csv
  
+###  Overview
 ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/628015ca-81ce-4495-8cdf-53e983c3625b)
 
 ### Steps : 
@@ -83,7 +89,7 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
  ### Pipeline Overview : 
  ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/0823f057-9f65-4c61-aed0-581a679a9d79)
 
-
- # Transformion  
+### End Data Ingestion 
+ # 2.Transformion  
  #### Cases & Deaths Data using Data Flow 
 
