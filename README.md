@@ -18,7 +18,7 @@ Our main objective here is to create a data platform from which our data scienti
  - Transformation : 
    -  Data Flows within the Data Factory
     - HDInsight
-   -  The data bricks 
+   -  DataBricks 
  
  - Data warehouse solution : 
     -  we've used Azure's SQL database
@@ -90,6 +90,65 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
  ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/0823f057-9f65-4c61-aed0-581a679a9d79)
 
 ### End Data Ingestion 
- # 2.Transformion  
- #### Cases & Deaths Data using Data Flow 
+ # 2.Transformation 
+ 
+ ## Data Flows (1)  Cases & Deaths Data
 
+###  Overview : 
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/9d1ef49b-d2da-4424-a735-aeda963cc98c)
+
+### Steps : 
+#### 1. Cases And DeathsSource (Azure Data Lake Storage Gen2 )
+#### 2. Filter Europe-Only Data 
+#### 3. Select Only Requirements Columns
+#### 4. PiovtCounts using indicator Columns using (confirmed cases, deaths) and get the sum Daily Count
+#### 5. Lookup Country to get country_code_2_digit,country_code_3_digit columns
+#### 6. Select Only requirements For Sink
+#### 7. Slink to Destination (Azure Data Lake Storage Gen2)
+
+ ### Pipeline Overview : 
+
+ ![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/aa9e1bcd-1dfa-4582-9f22-ac18c04f033a)
+
+ ## Data Flows (2)  Cases & Deaths Data
+ 
+ ###  Overview : 
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/7b6b58dc-c381-4d15-89b3-afccec2e8e7a)
+
+### Steps : 
+#### 1. Hospital Admissions Source (Azure Data Lake Storage Gen2 )
+#### 2. Select Only Requirements Columns 
+#### 3. Lookup Country to get country_code_2_digit,country_code_3_digit columns
+#### 4. Select Only Requirements Columns 
+#### 5. Condition Split Weekly, Daily Split condition 
+ <ol>
+   <li> indicator=='Weekly new hospital admissions per 100k' || indicator=='Weekly new ICU admissions per 100k'</li>
+   <li>  indicator== "Daily hospital occupancy" || indicator=="Daily ICU occupancy" </li>
+ </ol>
+  
+#### 6. For Weekly Path 
+ <ol>
+    <li> Join With Date To Get ecdc_Year_week,week_start_date,week_End_date</li>
+   <li> Piovt Counts using indicator Columns using (confirmed cases, deaths) and get the sum Daily Count </li>
+   <li> Sort Data using reported_year_week ASC and Country DESC  </li>
+   <li> Select Only requirements For Sink </li>
+   <li> Slink to Destination (Azure Data Lake Storage Gen2) </li>
+ </ol>
+
+   
+#### 7. For Daily Path 
+ <ol>
+   <li> Piovt Counts using indicator Columns using (confirmed cases, deaths) and get the sum Daily Count </li>
+   <li> Sort Data using reported_year_week ASC and Country DESC  </li>
+   <li> Select Only requirements For Sink </li>
+   <li> Slink to Destination (Azure Data Lake Storage Gen2) </li>
+ </ol>
+ 
+
+ ### Pipeline Overview : 
+
+![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/6e8008e1-5255-43d8-86b0-286826a50435)
+
+
+ 
+ 
