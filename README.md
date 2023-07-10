@@ -106,6 +106,7 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
 #### 5. Lookup Country to get country_code_2_digit,country_code_3_digit columns
 #### 6. Select Only requirements For Sink
 #### 7. Slink to Destination (Azure Data Lake Storage Gen2)
+#### 8. ScheduleTrigger <br>
 
  ### Pipeline Overview : 
 
@@ -134,6 +135,8 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
    <li> Sort Data using reported_year_week ASC and Country DESC  </li>
    <li> Select Only requirements For Sink </li>
    <li> Slink to Destination (Azure Data Lake Storage Gen2) </li>
+   <li> ScheduleTrigger </li>
+ 
  </ol>
 
    
@@ -143,6 +146,8 @@ Ingest "population by age" for all EU Countries into the Data Lake to support th
    <li> Sort Data using reported_year_week ASC and Country DESC  </li>
    <li> Select Only requirements For Sink </li>
    <li> Slink to Destination (Azure Data Lake Storage Gen2) </li>
+   <li> ScheduleTrigger </li>
+
  </ol>
  
 
