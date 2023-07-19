@@ -1,9 +1,10 @@
 
 # Azure-Data-Factory-For-Data-Engineers- 
 
-Projects done in the [Azure Data Factory For Data Engineers - Project on Covid19](https://www.udemy.com/course/learn-azure-data-factory-from-scratch/)
+ 
 
-Our main objective here is to create a data platform from which our data scientists can create machine-learning models. We'll then populate the data warehouse with the subset of the data so that it can be used for reporting on trends. The data warehouse will include details about confirmed cases, unfortunate mortality rates, hospitalization and ICU cases from our weekly data lake counts, and the testing numbers. We'll then build a Power BI report from this data.
+created a data platform from which our data scientists can create machine-learning models and populated the data warehouse with the subset of the data so that it can be used for reporting on trends. 
+The data warehouse will include details about confirmed cases, unfortunate mortality rates, hospitalization and ICU cases from our weekly data lake counts, and the testing numbers. I have been building a Power BI report from this data
 
 
 ### Source Data :
@@ -192,8 +193,6 @@ pyspark_notebooks/transform_population_data.py
  ### Dashboard Link : 
 [Power BI Dashboard Covid 19 Cases](https://app.powerbi.com/view?r=eyJrIjoiYjBhYWU0NTItMmVhOS00MGM5LTk1ZGEtMTQxZTdmZDUxMWUwIiwidCI6ImUwYjlhZTFlLWViMjYtNDZhOC1hZGYyLWQ3ZGJjZjIzNDBhOSJ9)
 
- ### My certification : 
-![image](https://github.com/AbdallahQoutbAli/Azure-Data-Factory-For-Data-Engineers---Project-on-Covid19/assets/47276503/a47295f1-8213-4927-8a8f-cbbd643582fc)
 
 
 <p> 
